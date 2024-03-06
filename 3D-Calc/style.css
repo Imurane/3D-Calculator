@@ -1,12 +1,14 @@
+::-webkit-scrollbar{width: 0px;}
 body{
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
+    width: 100vw;
     height: 100vh;
     flex-direction: column;
-    background: linear-gradient(to bottom, #678fd8 50%, #254a8f);
+    background: linear-gradient(to bottom, #678fd8 50%, hsla(219, 59%, 35%));
 }
 .calc{
     display: grid;
@@ -19,13 +21,12 @@ body{
 }
 .btns{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4,auto);
     gap: .5rem;
     padding: 1rem;
 }
 button{
-    width: 80px;
-    height: 80px;
+    aspect-ratio: 1;
     border: none;
     outline: none;
     cursor: pointer;
@@ -107,6 +108,8 @@ input{
 @keyframes shadow {
     50%{filter: blur(40px);}
 }
+
 @media (max-width:500px) {
     .con,.shadow{transform: rotate(0deg);animation: pausedd;}
+    body{padding: 0.1rem;}
 }
