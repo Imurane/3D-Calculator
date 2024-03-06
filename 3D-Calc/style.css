@@ -36,11 +36,18 @@ button{
     background-color: #666;
     transition: .2s;
     border-radius: 50%;
+    animation: btn-mov 4s infinite ease-in-out;
+    animation-delay: var(--i);
     box-shadow: 5px 5px 10px hsl(0, 0%, 0%), inset -5px 5px 10px hsl(0, 0%, 100%,0.5),inset 5px -5px 10px hsl(0, 0%, 0%,0.5);
+}
+@keyframes btn-mov {
+    40%{translate: 0%;box-shadow: 5px 5px 10px hsl(0, 0%, 0%), inset -5px 5px 10px hsl(0, 0%, 100%,0.5),inset 5px -5px 10px hsl(0, 0%, 0%,0.5);    }
+    50%{translate: -5px -5px;box-shadow: 7px 7px 20px hsl(0, 0%, 0%), inset -5px 5px 10px hsl(0, 0%, 100%,0.5),inset 5px -5px 10px hsl(0, 0%, 0%,0.5);    }
+    60%{translate: 0%;box-shadow: 5px 5px 10px hsl(0, 0%, 0%), inset -5px 5px 10px hsl(0, 0%, 100%,0.5),inset 5px -5px 10px hsl(0, 0%, 0%,0.5);}
 }
 button:hover{
     background: #777;
-    translate: -6px -6px;
+    transform: translate(-6px,-6px);
     box-shadow: 7px 7px 20px hsl(0, 0%, 0%), inset -5px 5px 10px hsl(0, 0%, 100%,0.5),inset 5px -5px 10px hsl(0, 0%, 0%,0.5);
 }
 button:active{
