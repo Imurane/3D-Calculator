@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    height: 100vh;
+    flex-direction: column;
+}
+.calc{
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 15px;
+    background-color: #444;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 20px 2px hsl(0, 0%, 0%);
+    border: hsla(0, 0%, 0%, 0.5) 2px solid;
+}
+.btns{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: .5rem;
+    padding: 1rem;
+}
+button{
+    width: 80px;
+    height: 80px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #666;
+    transition: .2s;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px hsl(0, 0%, 0%), inset -5px 5px 10px hsl(0, 0%, 100%,0.5),inset 5px -5px 10px hsl(0, 0%, 0%,0.5);
+}
+button:hover{
+    background: #777;
+    translate: -6px -6px;
+    box-shadow: 7px 7px 20px hsl(0, 0%, 0%), inset -5px 5px 10px hsl(0, 0%, 100%,0.5),inset 5px -5px 10px hsl(0, 0%, 0%,0.5);
+}
+button:active{
+    background: #888;
+    transition: .1s;
+    translate: -2px -2px;
+}
+input{
+    height: 80px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #777;
+    padding-inline:  .8rem;
+    box-shadow:inset 0 0 10px hsl(0, 0%, 0%);
+    border-bottom: 2px solid hsla(0, 0%, 0%, 0.7);
+}
+.btn{
+    background-color: #1a62fc;
+}
+.btn:hover{
+    background-color: #3575ff;
+}
+.btn:active{
+    background-color: #4c85ff;
+}
+
+.con{
+    padding: .2rem 1.7rem 1.7rem .2rem;
+    background-color: #333;
+    border-radius: 15px;
+    transform: 
+    perspective(2000px)
+    rotateY(-20deg)
+    rotateX(20deg);
+    animation: mov 6s infinite ease-in-out;
+    box-shadow: inset -8px -8px 10px 2px hsl(0, 0%, 0%),inset -10px -10px 15px hsl(0, 0%, 100%,0.5);
+}
+@keyframes mov {
+    50%{transform:
+        translateX(-20px)
+        translateY(-20px)
+        perspective(2000px)
+        rotateY(-20deg)
+        rotateX(20deg);}
+}
+.shadow{
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    background-color: #000;
+    transform: 
+    perspective(2000px)
+    rotateY(-20deg)
+    rotateX(20deg);
+    translate: 30px 30px;
+    z-index: -999;
+    filter: blur(25px);
+    opacity: 0.9;
+    animation: shadow 6s infinite ease-in-out;
+}
+@keyframes shadow {
+    50%{filter: blur(40px);}
+}
