@@ -4,7 +4,7 @@ var display = document.querySelector('input'),
     btnre = new Audio("btn-result.mp3");
 function calc (val="")
 {
-    if(display.value == 'Error' || display.value == 'NaN' || display.value == 'undefined'){display.value = '';}
+    if(display.value == 'Error' || display.value == 'NaN' || display.value == 'undefined' || display.value == 'RIP'){display.value = '';}
     display.value += val;
     btnc.play();
     return display.value;
