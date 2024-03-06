@@ -19,6 +19,7 @@ function result()
     btnre.play();
     try{
         display.value = eval(display.value);
+        if(display.value == '0'){display.value = 'RIP';}
     }
     catch(error){
         display.value = 'Error';
