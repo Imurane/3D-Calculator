@@ -8,7 +8,8 @@ body{
     width: 100vw;
     height: 100vh;
     flex-direction: column;
-    background: linear-gradient(to bottom, #678fd8 50%, hsla(219, 59%, 35%));
+    background: linear-gradient(to bottom,hsla(219, 59%, 35%), #678fd8 30% 70%, hsla(219, 59%, 35%));
+    background-size: contain;
 }
 .calc{
     display: grid;
@@ -132,6 +133,8 @@ input{
 
 @media (max-width:300px){
     input,button{font-size: 13px;}
-    .con{padding: 1rem;}
+    .con{padding: 0.9rem;}
     input{height: 50px;}
+    button{width: 100%;}
+    .btns{padding: 0.5rem;}
 }
