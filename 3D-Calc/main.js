@@ -18,7 +18,7 @@ function result()
 {
     btnre.play();
     try{
-        if(display.value == '1-1'){display.value = 'RIP';}
+        if(display.value == '0'){display.value = 'chfanja';}
         else{display.value = eval(calc());}
     }
     catch(error){
