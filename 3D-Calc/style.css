@@ -121,10 +121,14 @@ input{
 @media (max-width:500px) {
     .con,.shadow{transform: rotate(0deg);animation: none;}
     .con{padding: 1.7rem;width: 70vw;box-shadow: inset 0px 0px 10px 2px hsl(0, 0%, 0%),inset 0px 0px 15px hsl(0, 0%, 100%,0.5);}
-    body{margin: 1rem;}
-    button{width: 80%;animation: none;}
+    button{width: 90%;animation: none;}
     button:hover{transform: translate(0%);}
     button:active{translate: 0%;}
     input{width: 93%;}
-    .shadow{height: 70%;}
+    .shadow{height: 80%;width: 100%;translate: 0%;}
+    input,button{font-size: 20px;}
+}
+
+@media (max-width:300px){
+    input,button{font-size: 13px;}
 }
