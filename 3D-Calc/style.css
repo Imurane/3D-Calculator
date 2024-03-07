@@ -18,6 +18,7 @@ body{
     overflow: hidden;
     box-shadow: inset 0px 0px 20px 2px hsl(0, 0%, 0%);
     border: hsla(0, 0%, 0%, 0.5) 2px solid;
+    height: 100%;
 }
 .btns{
     display: grid;
@@ -120,15 +121,17 @@ input{
 
 @media (max-width:500px) {
     .con,.shadow{transform: rotate(0deg);animation: none;}
-    .con{padding: 1.7rem;width: 70vw;box-shadow: inset 0px 0px 10px 2px hsl(0, 0%, 0%),inset 0px 0px 15px hsl(0, 0%, 100%,0.5);}
+    .con{padding: 1.3rem;width: 70vw;box-shadow: inset 0px 0px 10px 2px hsl(0, 0%, 0%),inset 0px 0px 15px hsl(0, 0%, 100%,0.5), 8px 8px 30px 10px hsla(0, 0%, 0%, 0.9);}
     button{width: 90%;animation: none;}
     button:hover{transform: translate(0%);}
     button:active{translate: 0%;}
-    input{width: 93%;}
-    .shadow{height: 80%;width: 100%;translate: 0%;}
+    input{width: 93%;height: 60px;}
+    .shadow{display: none;}
     input,button{font-size: 20px;}
 }
 
 @media (max-width:300px){
     input,button{font-size: 13px;}
+    .con{padding: 1rem;}
+    input{height: 50px;}
 }
