@@ -55,8 +55,8 @@ button:hover{
 }
 button:active{
     background: #888;
-    transition: .1s;
-    translate: -2px -2px;
+    transition: .2s;
+    transform: translate(-3px,-3px);
 }
 input{
     height: 80px;
