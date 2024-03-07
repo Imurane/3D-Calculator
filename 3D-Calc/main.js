@@ -18,8 +18,8 @@ function result()
 {
     btnre.play();
     try{
-        if(display.value == '1-1'){display.value = '0';}
-        display.value = eval(calc());
+        if(display.value == '1-1'){display.value = 'RIP';}
+        else{display.value = eval(calc());}
     }
     catch(error){
         display.value = 'Error';
